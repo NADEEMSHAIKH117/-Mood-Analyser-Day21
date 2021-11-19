@@ -22,4 +22,11 @@ public class MoodAnalyserTest {
         String actualResult = moodAnalyser.analyseMood();
         assertEquals("Happy", actualResult);
 	}
+	
+	  @Test
+	    public void givenMessage_Null_ShouldReturnExceptionHandled() {
+	        moodAnalyser.setMessage(null);
+	        String actualResult = moodAnalyser.analyseMood();
+	        assertEquals("Exception Handled", actualResult);
+	    }
 }
